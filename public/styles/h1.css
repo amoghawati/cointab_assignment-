@@ -1,0 +1,27 @@
+.navbar{
+    align-items: center;
+    margin-left:35%;
+    margin-top: 20px;
+    /* background-color: rgb(206, 208, 209); */
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: 1px solid black;
+    /* margin-top: 20px; */
+}
+.navbar a:hover{
+    color: black;
+    background-color: white;
+    
+}
+.users{
+    margin-left: 23%;
+    margin-top: 30px;
+}
+.user th,.user td{
+    padding: 10px 20px;
+}

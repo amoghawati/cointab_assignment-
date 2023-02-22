@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/h1.css">
+</head>
+<body>
+    {{>navbar}}
+        <section class="users">
+        <h3>Affected Rows:{{result.length}}</h3>
+        <table border="5">
+            <tr>
+                <th>user id</th>
+                <th>name</th>
+                <th>email</th>
+                <th>phone number</th>
+                <th>picture</th>
+            </tr>
+            {{#each result}}
+            <div class="user">
+                <tr>
+                    <td>{{this.id}} </td>
+                    <td>{{this.name}} </td>
+                    <td>{{this.email}} </td>
+                    <td>{{this.phone}} </td>
+                    <td><img src={{this.picture}} width="200px" alt=""> </td>
+                </tr>
+            </div>
+            {{/each}}
+        </table>
+       
+    </section>
+</body>
+</html>
