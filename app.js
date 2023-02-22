@@ -34,33 +34,6 @@ connection.query(createTableQuery, (err, result) => {
 app.get('/', (req, res) => {
   res.render('home')
 })
-// app.get("/fecthuser", (req, res) => {
-//   const fetchUrl = 'https://randomuser.me/api/?results=50';
-//   fetch(fetchUrl)
-//       .then(response => response.json())
-//       .then(data => {
-//           const users = data.results;
-//           const insertQuery = 'INSERT INTO users (name, email, phone, picture) VALUES ?';
-//           const values = users.map(user => [`${user.name.first} ${user.name.last}`, user.email, user.phone, user.picture.large]);
-//           connection.query(insertQuery, [values], (err, result) => {
-//               if (err) throw err;
-//               console.log(`${result.affectedRows} users inserted`);
-//               // res.send(`${result.affectedRows} users inserted`);
-//           });
-
-
-//       })
-//       .catch(err => {
-//           console.log(err);
-//           res.render('Error fetching users');
-//       });
-//   // res.render('fetchuser')
-//   connection.query('select * from users', (err, result) => {
-//       if (err) throw err;
-//       res.render('fetchuser', result)
-//       console.log("data retrived");
-//   })
-// })
 app.listen(5000, () => {
   console.log("listening to server on 5000");
 })
